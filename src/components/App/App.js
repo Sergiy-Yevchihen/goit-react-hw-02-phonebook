@@ -1,13 +1,11 @@
-
-
 import React, { Component } from 'react';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-import { GlobalStyle } from '../theme/GlobalStyle.styled';
-import ContactForm from '../components/ContactForm';
-import Section from '../components/Section';
-import ContactList from '../components/ContactList';
-import Filter from '../components/Filter';
+import { GlobalStyle } from '../../theme/GlobalStyle.styled';
+import ContactForm from '../ContactForm';
+import Section from '../Section';
+import ContactList from '../ContactList';
+import Filter from '../Filter';
 
 class App extends Component {
   state = {
