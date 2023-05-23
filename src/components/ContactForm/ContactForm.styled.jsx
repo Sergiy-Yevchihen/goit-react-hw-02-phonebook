@@ -15,7 +15,7 @@ export const FormLabelBox = styled.div``;
 export const FormLabel = styled.label`
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 300px;
   margin-bottom: 10px;
 `;
 export const Input = styled.input`
