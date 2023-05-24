@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Title, SectionWrap } from './Section.styled';
 
-// рендерит секцию с заголовком и детей (children)
+
 const Section = ({ title, children }) => {
   return (
     <SectionWrap>

@@ -11,41 +11,41 @@ const INITIAL_STATE = {
 class ContactForm extends Component {
   state = INITIAL_STATE;
 
-  // обоработчик для инпута в onChange
+  
   handleChangeForm = ({ target }) => {
     const { name, value } = target;
     this.setState({ [name]: value });
   };
-  // обоработчик для submit форсмы
+  
   handleFormSubmit = e => {
     e.preventDefault();
-    // берем из state имя и телефон
+    
     const { name, number } = this.state;
     const { onAdd } = this.props;
     const isValidateForm = this.validateForm();
-    // проверяем если форма не валидна делаем возврат
+    
     if (!isValidateForm) return;
-    // если все ок вызываем метод onAdd и кладем в него на контакт name, number
+    
     onAdd({ id: nanoid(), name, number });
     this.resetForm();
   };
-  // валидатор формы
+ 
   validateForm = () => {
     const { name, number } = this.state;
     const { onCheckUnique } = this.props;
-    //проверяем если у нас поля они не пустые
+   
     if (!name || !number) {
       Notify.failure('Some field is empty');
       return false;
     }
-    // функция проверяет есть ли такой контакт в списке контактов
+    
     return onCheckUnique(name);
   };
-  //метод для очистки формы после отправки данных
+  
   resetForm = () => this.setState(INITIAL_STATE);
 
   render() {
-    // берем из state имя и телефон
+    
     const { name, number } = this.state;
     return (
       <Form onSubmit={this.handleFormSubmit} key={this.id}>

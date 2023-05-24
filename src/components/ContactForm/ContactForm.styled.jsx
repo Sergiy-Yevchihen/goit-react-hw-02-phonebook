@@ -11,7 +11,8 @@ export const Form = styled.form`
   -webkit-box-pack: center;
    justify-content: center;
 `;
-export const FormLabelBox = styled.div``;
+export const FormLabelBox = styled.div`
+`;
 export const FormLabel = styled.label`
   display: flex;
   flex-direction: column;
@@ -30,6 +31,6 @@ export const Input = styled.input`
   border: 1px solid rgb(206, 205, 205);
 
   &:focus {
-    border: 4px solid #99c2f8;
+    border: 2px solid #99c2f8;
   }
 `;
