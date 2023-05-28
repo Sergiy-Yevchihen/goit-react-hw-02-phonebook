@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 import { GlobalStyle } from '../../theme/GlobalStyle.styled';
-import ContactForm from '../ContactForm';
+import ContactForm from '../ContactForm/ContactForm';
 import Section from '../Section';
 import ContactList from '../ContactList';
 import Filter from '../Filter';
